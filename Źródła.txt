@@ -1,0 +1,4 @@
+Nasłonecznienie - https://re.jrc.ec.europa.eu/pvg_tools/en/
+Ceny prądu - https://www.pse.pl/obszary-dzialalnosci/rynek-energii/ceny-i-ilosc-energii-na-rynku-bilansujacym
+Obciążenie - https://www.pse.pl/dane-systemowe/funkcjonowanie-kse/raporty-dobowe-z-pracy-kse/wielkosci-podstawowe
+Temperatura, prędkość wiatru - https://danepubliczne.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_meteorologiczne/dobowe/klimat/
