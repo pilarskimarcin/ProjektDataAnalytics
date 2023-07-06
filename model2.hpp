@@ -10,26 +10,26 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 21> locations_array__ = 
 {" (found before start of program)",
- " (in '/home/Projekt/model2.stan', line 9, column 4 to line 17, column 6)",
- " (in '/home/Projekt/model2.stan', line 18, column 4 to column 15)",
- " (in '/home/Projekt/model2.stan', line 19, column 4 to column 12)",
- " (in '/home/Projekt/model2.stan', line 20, column 4 to column 25)",
- " (in '/home/Projekt/model2.stan', line 22, column 8 to column 15)",
- " (in '/home/Projekt/model2.stan', line 24, column 12 to column 106)",
- " (in '/home/Projekt/model2.stan', line 25, column 12 to column 44)",
- " (in '/home/Projekt/model2.stan', line 23, column 23 to line 26, column 9)",
- " (in '/home/Projekt/model2.stan', line 23, column 8 to line 26, column 9)",
- " (in '/home/Projekt/model2.stan', line 27, column 8 to column 61)",
- " (in '/home/Projekt/model2.stan', line 28, column 8 to column 48)",
- " (in '/home/Projekt/model2.stan', line 21, column 19 to line 29, column 5)",
- " (in '/home/Projekt/model2.stan', line 21, column 4 to line 29, column 5)",
- " (in '/home/Projekt/model2.stan', line 2, column 4 to column 19)",
- " (in '/home/Projekt/model2.stan', line 3, column 10 to column 11)",
- " (in '/home/Projekt/model2.stan', line 3, column 4 to column 29)",
- " (in '/home/Projekt/model2.stan', line 4, column 10 to column 11)",
- " (in '/home/Projekt/model2.stan', line 4, column 4 to column 22)",
- " (in '/home/Projekt/model2.stan', line 5, column 4 to column 11)",
- " (in '/home/Projekt/model2.stan', line 20, column 10 to column 11)"};
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 10, column 4 to column 15)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 11, column 4 to column 12)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 12, column 4 to column 25)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 14, column 8 to column 15)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 16, column 12 to column 50)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 17, column 12 to column 44)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 15, column 23 to line 18, column 9)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 15, column 8 to line 18, column 9)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 19, column 8 to column 44)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 20, column 8 to column 48)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 13, column 19 to line 21, column 5)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 13, column 4 to line 21, column 5)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 2, column 4 to column 19)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 3, column 10 to column 11)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 3, column 4 to column 29)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 4, column 10 to column 11)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 4, column 4 to column 22)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 5, column 4 to column 11)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 6, column 4 to column 28)",
+ " (in '/home/ProjektDataAnalytics/model2.stan', line 12, column 10 to column 11)"};
 
 
 
@@ -40,7 +40,8 @@ class model2_model final : public model_base_crtp<model2_model> {
   int N;
   std::vector<int> day_of_week;
   std::vector<int> hour;
-  int nu; 
+  int nu;
+  std::vector<std::vector<double>> coeffs; 
   
  
  public:
@@ -68,44 +69,72 @@ class model2_model final : public model_base_crtp<model2_model> {
     try {
       int pos__ = std::numeric_limits<int>::min();
       pos__ = 1;
-      current_statement__ = 14;
+      current_statement__ = 13;
       context__.validate_dims("data initialization","N","int",
            std::vector<size_t>{});
       N = std::numeric_limits<int>::min();
       
       
-      current_statement__ = 14;
+      current_statement__ = 13;
       N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 14;
+      current_statement__ = 13;
       stan::math::check_greater_or_equal(function__, "N", N, 0);
-      current_statement__ = 15;
+      current_statement__ = 14;
       stan::math::validate_non_negative_index("day_of_week", "N", N);
-      current_statement__ = 16;
+      current_statement__ = 15;
       context__.validate_dims("data initialization","day_of_week","int",
            std::vector<size_t>{static_cast<size_t>(N)});
       day_of_week = std::vector<int>(N, std::numeric_limits<int>::min());
       
       
-      current_statement__ = 16;
+      current_statement__ = 15;
       day_of_week = context__.vals_i("day_of_week");
-      current_statement__ = 17;
+      current_statement__ = 16;
       stan::math::validate_non_negative_index("hour", "N", N);
-      current_statement__ = 18;
+      current_statement__ = 17;
       context__.validate_dims("data initialization","hour","int",
            std::vector<size_t>{static_cast<size_t>(N)});
       hour = std::vector<int>(N, std::numeric_limits<int>::min());
       
       
-      current_statement__ = 18;
+      current_statement__ = 17;
       hour = context__.vals_i("hour");
-      current_statement__ = 19;
+      current_statement__ = 18;
       context__.validate_dims("data initialization","nu","int",
            std::vector<size_t>{});
       nu = std::numeric_limits<int>::min();
       
       
-      current_statement__ = 19;
+      current_statement__ = 18;
       nu = context__.vals_i("nu")[(1 - 1)];
+      current_statement__ = 19;
+      context__.validate_dims("data initialization","coeffs","double",
+           std::vector<size_t>{static_cast<size_t>(7),
+            static_cast<size_t>(6)});
+      coeffs = 
+        std::vector<std::vector<double>>(7, 
+          std::vector<double>(6, std::numeric_limits<double>::quiet_NaN()));
+      
+      
+      {
+        std::vector<local_scalar_t__> coeffs_flat__;
+        current_statement__ = 19;
+        coeffs_flat__ = context__.vals_r("coeffs");
+        current_statement__ = 19;
+        pos__ = 1;
+        current_statement__ = 19;
+        for (int sym1__ = 1; sym1__ <= 6; ++sym1__) {
+          current_statement__ = 19;
+          for (int sym2__ = 1; sym2__ <= 7; ++sym2__) {
+            current_statement__ = 19;
+            stan::model::assign(coeffs, coeffs_flat__[(pos__ - 1)],
+              "assigning variable coeffs", stan::model::index_uni(sym2__),
+                                             stan::model::index_uni(sym1__));
+            current_statement__ = 19;
+            pos__ = (pos__ + 1);
+          }
+        }
+      }
       current_statement__ = 20;
       stan::math::validate_non_negative_index("demand", "N", N);
     } catch (const std::exception& e) {
@@ -174,74 +203,41 @@ class model2_model final : public model_base_crtp<model2_model> {
       if (stan::math::logical_negation(emit_generated_quantities__)) {
         return ;
       } 
-      std::vector<std::vector<double>> coeffs =
-         std::vector<std::vector<double>>(7, 
-           std::vector<double>(6, std::numeric_limits<double>::quiet_NaN()));
-      current_statement__ = 1;
-      stan::model::assign(coeffs, std::vector<std::vector<double>>{
-        std::vector<double>{-0.0950703760, 6.14994947, -145.486338,
-        1474.70424, -5158.13662, 20059.8441}, std::vector<double>{
-        -0.0878203160, 5.62519133, -131.871194, 1330.29756, -4729.11895,
-        21332.4030}, std::vector<double>{-0.0963035781, 6.04350114,
-        -137.821128, 1345.36611, -4648.44525, 21683.3403},
-        std::vector<double>{-0.0857723180, 5.45456535, -126.952039,
-        1272.63620, -4510.04698, 21538.1083}, std::vector<double>{
-        -0.0810986775, 5.18096566, -121.186825, 1219.85827, -4339.87823,
-        21338.8750}, std::vector<double>{-0.0480872995, 3.15380473,
-        -77.3493888, 841.564212, -3459.06662, 20447.6010},
-        std::vector<double>{-0.0448080230, 2.84113231, -67.0128103,
-        710.661245, -2946.40244, 18323.0422}}, "assigning variable coeffs");
       double theta = std::numeric_limits<double>::quiet_NaN();
       double mu = std::numeric_limits<double>::quiet_NaN();
       std::vector<double> demand =
          std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
-      current_statement__ = 13;
+      current_statement__ = 12;
       for (int i = 1; i <= N; ++i) {
-        current_statement__ = 5;
+        current_statement__ = 4;
         mu = 0;
-        current_statement__ = 9;
+        current_statement__ = 8;
         for (int j = 1; j <= 5; ++j) {
+          current_statement__ = 5;
+          theta = stan::model::rvalue(
+                    stan::model::rvalue(coeffs, "coeffs",
+  stan::model::index_uni((stan::model::rvalue(day_of_week, "day_of_week",
+                            stan::model::index_uni(i)) + 1))),
+                    "coeffs[(day_of_week[i] + 1)]",
+                    stan::model::index_uni(j));
           current_statement__ = 6;
-          theta = stan::math::normal_rng(
-                    stan::model::rvalue(
-                      stan::model::rvalue(coeffs, "coeffs",
-  stan::model::index_uni((stan::model::rvalue(day_of_week, "day_of_week",
-                            stan::model::index_uni(i)) + 1))),
-                      "coeffs[(day_of_week[i] + 1)]",
-                      stan::model::index_uni(j)),
-                    stan::math::abs(
-                      (0.005 *
-                        stan::model::rvalue(
-                          stan::model::rvalue(coeffs, "coeffs",
-  stan::model::index_uni((stan::model::rvalue(day_of_week, "day_of_week",
-                            stan::model::index_uni(i)) + 1))),
-                          "coeffs[(day_of_week[i] + 1)]",
-                          stan::model::index_uni(j)))), base_rng__);
-          current_statement__ = 7;
           mu = (mu +
                  (theta *
                    stan::math::pow(
                      stan::model::rvalue(hour, "hour",
                        stan::model::index_uni(i)), (6 - j))));
         }
-        current_statement__ = 10;
+        current_statement__ = 9;
         mu = (mu +
-               stan::math::normal_rng(
-                 stan::model::rvalue(
-                   stan::model::rvalue(coeffs, "coeffs",
+               stan::model::rvalue(
+                 stan::model::rvalue(coeffs, "coeffs",
   stan::model::index_uni((stan::model::rvalue(day_of_week, "day_of_week",
                             stan::model::index_uni(i)) + 1))),
-                   "coeffs[(day_of_week[i] + 1)]", stan::model::index_uni(6)),
-                 100, base_rng__));
-        current_statement__ = 11;
+                 "coeffs[(day_of_week[i] + 1)]", stan::model::index_uni(6)));
+        current_statement__ = 10;
         stan::model::assign(demand,
-          stan::math::student_t_rng(nu, mu, 1000, base_rng__),
+          stan::math::student_t_rng(nu, mu, 2800, base_rng__),
           "assigning variable demand", stan::model::index_uni(i));
-      }
-      for (int sym1__ = 1; sym1__ <= 6; ++sym1__) {
-        for (int sym2__ = 1; sym2__ <= 7; ++sym2__) {
-          out__.write(coeffs[(sym2__ - 1)][(sym1__ - 1)]);
-        }
       }
       out__.write(theta);
       out__.write(mu);
@@ -273,19 +269,14 @@ class model2_model final : public model_base_crtp<model2_model> {
     
   inline void get_param_names(std::vector<std::string>& names__) const {
     
-    names__ = std::vector<std::string>{"coeffs", "theta", "mu", "demand"};
+    names__ = std::vector<std::string>{"theta", "mu", "demand"};
     
     } // get_param_names() 
     
   inline void get_dims(std::vector<std::vector<size_t>>& dimss__) const {
     
-    dimss__ = std::vector<std::vector<size_t>>{std::vector<size_t>{
-                                                                   static_cast<size_t>(7)
-                                                                   ,
-                                                                   static_cast<size_t>(6)
-                                                                   },
-      std::vector<size_t>{}, std::vector<size_t>{},
-      std::vector<size_t>{static_cast<size_t>(N)}};
+    dimss__ = std::vector<std::vector<size_t>>{std::vector<size_t>{},
+      std::vector<size_t>{}, std::vector<size_t>{static_cast<size_t>(N)}};
     
     } // get_dims() 
     
@@ -301,15 +292,6 @@ class model2_model final : public model_base_crtp<model2_model> {
     }
     
     if (emit_generated_quantities__) {
-      for (int sym1__ = 1; sym1__ <= 6; ++sym1__) {
-        {
-          for (int sym2__ = 1; sym2__ <= 7; ++sym2__) {
-            {
-              param_names__.emplace_back(std::string() + "coeffs" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
-            } 
-          }
-        } 
-      }
       param_names__.emplace_back(std::string() + "theta");
       param_names__.emplace_back(std::string() + "mu");
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
@@ -333,15 +315,6 @@ class model2_model final : public model_base_crtp<model2_model> {
     }
     
     if (emit_generated_quantities__) {
-      for (int sym1__ = 1; sym1__ <= 6; ++sym1__) {
-        {
-          for (int sym2__ = 1; sym2__ <= 7; ++sym2__) {
-            {
-              param_names__.emplace_back(std::string() + "coeffs" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
-            } 
-          }
-        } 
-      }
       param_names__.emplace_back(std::string() + "theta");
       param_names__.emplace_back(std::string() + "mu");
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
@@ -355,13 +328,13 @@ class model2_model final : public model_base_crtp<model2_model> {
     
   inline std::string get_constrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"coeffs\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(7) + ",\"element_type\":{\"name\":\"array\",\"length\":" + std::to_string(6) + ",\"element_type\":{\"name\":\"real\"}}},\"block\":\"generated_quantities\"},{\"name\":\"theta\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"demand\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"theta\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"demand\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
     
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"coeffs\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(7) + ",\"element_type\":{\"name\":\"array\",\"length\":" + std::to_string(6) + ",\"element_type\":{\"name\":\"real\"}}},\"block\":\"generated_quantities\"},{\"name\":\"theta\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"demand\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"theta\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"demand\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
     
     } // get_unconstrained_sizedtypes() 
     
@@ -377,7 +350,7 @@ class model2_model final : public model_base_crtp<model2_model> {
       const size_t num_params__ = 0;
       const size_t num_transformed = 0;
       const size_t num_gen_quantities = 
-  ((((7 * 6) + 1) + 1) + N);
+  ((1 + 1) + N);
       std::vector<double> vars_vec(num_params__
        + (emit_transformed_parameters * num_transformed)
        + (emit_generated_quantities * num_gen_quantities));
@@ -398,7 +371,7 @@ class model2_model final : public model_base_crtp<model2_model> {
       const size_t num_params__ = 0;
       const size_t num_transformed = 0;
       const size_t num_gen_quantities = 
-  ((((7 * 6) + 1) + 1) + N);
+  ((1 + 1) + N);
       vars.resize(num_params__
         + (emit_transformed_parameters * num_transformed)
         + (emit_generated_quantities * num_gen_quantities));
