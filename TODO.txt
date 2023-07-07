@@ -1,0 +1,7 @@
+1. Prior for the prices
+2. Posterior
+3. Expanding to a whole year
+4. Second model
+5. Check if everything is in English
+6. Check if plots are appropriately labeled
+7. Delete unnecessary comments and commented code
