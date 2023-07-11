@@ -8,7 +8,7 @@ using namespace stan::math;
 
 
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 62> locations_array__ = 
+static constexpr std::array<const char*, 65> locations_array__ = 
 {" (found before start of program)",
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 17, column 4 to column 16)",
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 18, column 4 to column 16)",
@@ -23,15 +23,17 @@ static constexpr std::array<const char*, 62> locations_array__ =
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 29, column 4 to column 18)",
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 30, column 4 to column 22)",
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 31, column 4 to column 23)",
- " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 59, column 4 to column 25)",
- " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 60, column 4 to column 29)",
- " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 61, column 4 to column 25)",
- " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 63, column 8 to column 33)",
- " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 64, column 8 to column 133)",
- " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 65, column 8 to column 114)",
- " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 66, column 8 to column 105)",
- " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 62, column 19 to line 67, column 5)",
- " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 62, column 4 to line 67, column 5)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 59, column 4 to column 23)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 60, column 4 to column 25)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 61, column 4 to column 29)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 62, column 4 to column 25)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 64, column 8 to column 33)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 65, column 8 to column 133)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 66, column 8 to column 114)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 67, column 8 to column 105)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 68, column 8 to column 120)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 63, column 19 to line 69, column 5)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 63, column 4 to line 69, column 5)",
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 35, column 8 to column 33)",
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 36, column 8 to column 33)",
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 37, column 8 to column 33)",
@@ -68,9 +70,10 @@ static constexpr std::array<const char*, 62> locations_array__ =
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 12, column 4 to column 29)",
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 22, column 10 to column 19)",
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 27, column 10 to column 19)",
- " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 59, column 10 to column 11)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 59, column 12 to column 13)",
  " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 60, column 10 to column 11)",
- " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 61, column 10 to column 11)"};
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 61, column 10 to column 11)",
+ " (in '/home/ProjektDataAnalytics/Comparison_of_models/final_posterior_model3.stan', line 62, column 10 to column 11)"};
 
 
 
@@ -114,57 +117,57 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
     try {
       int pos__ = std::numeric_limits<int>::min();
       pos__ = 1;
-      current_statement__ = 41;
+      current_statement__ = 43;
       context__.validate_dims("data initialization","N_samples","int",
            std::vector<size_t>{});
       N_samples = std::numeric_limits<int>::min();
       
       
-      current_statement__ = 41;
+      current_statement__ = 43;
       N_samples = context__.vals_i("N_samples")[(1 - 1)];
-      current_statement__ = 41;
+      current_statement__ = 43;
       stan::math::check_greater_or_equal(function__, "N_samples", N_samples,
                                             0);
-      current_statement__ = 42;
+      current_statement__ = 44;
       stan::math::validate_non_negative_index("day_of_week_historic",
                                               "N_samples", N_samples);
-      current_statement__ = 43;
+      current_statement__ = 45;
       context__.validate_dims("data initialization","day_of_week_historic",
           "int", std::vector<size_t>{static_cast<size_t>(N_samples)});
       day_of_week_historic = 
         std::vector<int>(N_samples, std::numeric_limits<int>::min());
       
       
-      current_statement__ = 43;
+      current_statement__ = 45;
       day_of_week_historic = context__.vals_i("day_of_week_historic");
-      current_statement__ = 43;
+      current_statement__ = 45;
       stan::math::check_greater_or_equal(function__, "day_of_week_historic",
                                             day_of_week_historic, 0);
-      current_statement__ = 43;
+      current_statement__ = 45;
       stan::math::check_less_or_equal(function__, "day_of_week_historic",
                                          day_of_week_historic, 6);
-      current_statement__ = 44;
+      current_statement__ = 46;
       stan::math::validate_non_negative_index("hour_historic", "N_samples",
                                               N_samples);
-      current_statement__ = 45;
+      current_statement__ = 47;
       context__.validate_dims("data initialization","hour_historic","int",
            std::vector<size_t>{static_cast<size_t>(N_samples)});
       hour_historic = 
         std::vector<int>(N_samples, std::numeric_limits<int>::min());
       
       
-      current_statement__ = 45;
+      current_statement__ = 47;
       hour_historic = context__.vals_i("hour_historic");
-      current_statement__ = 45;
+      current_statement__ = 47;
       stan::math::check_greater_or_equal(function__, "hour_historic",
                                             hour_historic, 1);
-      current_statement__ = 45;
+      current_statement__ = 47;
       stan::math::check_less_or_equal(function__, "hour_historic",
                                          hour_historic, 24);
-      current_statement__ = 46;
+      current_statement__ = 48;
       stan::math::validate_non_negative_index("wind_speed_historic",
                                               "N_samples", N_samples);
-      current_statement__ = 47;
+      current_statement__ = 49;
       context__.validate_dims("data initialization","wind_speed_historic",
           "double", std::vector<size_t>{static_cast<size_t>(N_samples)});
       wind_speed_historic = 
@@ -172,12 +175,12 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
           std::numeric_limits<double>::quiet_NaN());
       
       
-      current_statement__ = 47;
+      current_statement__ = 49;
       wind_speed_historic = context__.vals_r("wind_speed_historic");
-      current_statement__ = 48;
+      current_statement__ = 50;
       stan::math::validate_non_negative_index("prices_samples", "N_samples",
                                               N_samples);
-      current_statement__ = 49;
+      current_statement__ = 51;
       context__.validate_dims("data initialization","prices_samples",
           "double", std::vector<size_t>{static_cast<size_t>(N_samples)});
       prices_samples = 
@@ -185,70 +188,72 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
           std::numeric_limits<double>::quiet_NaN());
       
       
-      current_statement__ = 49;
+      current_statement__ = 51;
       prices_samples = context__.vals_r("prices_samples");
-      current_statement__ = 50;
+      current_statement__ = 52;
       context__.validate_dims("data initialization","N","int",
            std::vector<size_t>{});
       N = std::numeric_limits<int>::min();
       
       
-      current_statement__ = 50;
-      N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 50;
-      stan::math::check_greater_or_equal(function__, "N", N, 0);
-      current_statement__ = 51;
-      stan::math::validate_non_negative_index("day_of_week", "N", N);
       current_statement__ = 52;
+      N = context__.vals_i("N")[(1 - 1)];
+      current_statement__ = 52;
+      stan::math::check_greater_or_equal(function__, "N", N, 0);
+      current_statement__ = 53;
+      stan::math::validate_non_negative_index("day_of_week", "N", N);
+      current_statement__ = 54;
       context__.validate_dims("data initialization","day_of_week","int",
            std::vector<size_t>{static_cast<size_t>(N)});
       day_of_week = std::vector<int>(N, std::numeric_limits<int>::min());
       
       
-      current_statement__ = 52;
+      current_statement__ = 54;
       day_of_week = context__.vals_i("day_of_week");
-      current_statement__ = 52;
+      current_statement__ = 54;
       stan::math::check_greater_or_equal(function__, "day_of_week",
                                             day_of_week, 0);
-      current_statement__ = 52;
+      current_statement__ = 54;
       stan::math::check_less_or_equal(function__, "day_of_week", day_of_week,
                                          6);
-      current_statement__ = 53;
+      current_statement__ = 55;
       stan::math::validate_non_negative_index("hour", "N", N);
-      current_statement__ = 54;
+      current_statement__ = 56;
       context__.validate_dims("data initialization","hour","int",
            std::vector<size_t>{static_cast<size_t>(N)});
       hour = std::vector<int>(N, std::numeric_limits<int>::min());
       
       
-      current_statement__ = 54;
-      hour = context__.vals_i("hour");
-      current_statement__ = 54;
-      stan::math::check_greater_or_equal(function__, "hour", hour, 1);
-      current_statement__ = 54;
-      stan::math::check_less_or_equal(function__, "hour", hour, 24);
-      current_statement__ = 55;
-      stan::math::validate_non_negative_index("wind_speed", "N", N);
       current_statement__ = 56;
+      hour = context__.vals_i("hour");
+      current_statement__ = 56;
+      stan::math::check_greater_or_equal(function__, "hour", hour, 1);
+      current_statement__ = 56;
+      stan::math::check_less_or_equal(function__, "hour", hour, 24);
+      current_statement__ = 57;
+      stan::math::validate_non_negative_index("wind_speed", "N", N);
+      current_statement__ = 58;
       context__.validate_dims("data initialization","wind_speed","double",
            std::vector<size_t>{static_cast<size_t>(N)});
       wind_speed = 
         std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
       
       
-      current_statement__ = 56;
+      current_statement__ = 58;
       wind_speed = context__.vals_r("wind_speed");
-      current_statement__ = 57;
+      current_statement__ = 59;
       stan::math::validate_non_negative_index("demand_samples", "N_samples",
                                               N_samples);
-      current_statement__ = 58;
+      current_statement__ = 60;
       stan::math::validate_non_negative_index("generation_samples",
                                               "N_samples", N_samples);
-      current_statement__ = 59;
-      stan::math::validate_non_negative_index("demand", "N", N);
-      current_statement__ = 60;
-      stan::math::validate_non_negative_index("generation", "N", N);
       current_statement__ = 61;
+      stan::math::validate_non_negative_index("log_lik", "N", N);
+      current_statement__ = 62;
+      stan::math::validate_non_negative_index("demand", "N", N);
+      current_statement__ = 63;
+      stan::math::validate_non_negative_index("generation", "N", N);
+      current_statement__ = 64;
       stan::math::validate_non_negative_index("prices", "N", N);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -320,40 +325,40 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
       current_statement__ = 13;
       offset_prices = in__.template read<local_scalar_t__>();
       {
-        current_statement__ = 23;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(a_hour, -32, 10));
-        current_statement__ = 24;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(b_hour, 980, 10));
         current_statement__ = 25;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(a_day, -300, 20));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(a_hour, -32, 10));
         current_statement__ = 26;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(b_day, 1200, 100));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(b_hour, 980, 10));
         current_statement__ = 27;
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(a_day, -300, 20));
+        current_statement__ = 28;
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(b_day, 1200, 100));
+        current_statement__ = 29;
         lp_accum__.add(
           stan::math::normal_lpdf<propto__>(offset_demand, 14500, 2000));
-        current_statement__ = 28;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(a_ws, -56, 10));
-        current_statement__ = 29;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(b_ws, 1323, 100));
         current_statement__ = 30;
-        lp_accum__.add(
-          stan::math::normal_lpdf<propto__>(offset_generation, 3449, 600));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(a_ws, -56, 10));
         current_statement__ = 31;
-        lp_accum__.add(
-          stan::math::normal_lpdf<propto__>(a_demand, 0.011, 0.001));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(b_ws, 1323, 100));
         current_statement__ = 32;
         lp_accum__.add(
-          stan::math::normal_lpdf<propto__>(a_generation, -0.008, 0.0001));
+          stan::math::normal_lpdf<propto__>(offset_generation, 3449, 600));
         current_statement__ = 33;
         lp_accum__.add(
+          stan::math::normal_lpdf<propto__>(a_demand, 0.011, 0.001));
+        current_statement__ = 34;
+        lp_accum__.add(
+          stan::math::normal_lpdf<propto__>(a_generation, -0.008, 0.0001));
+        current_statement__ = 35;
+        lp_accum__.add(
           stan::math::normal_lpdf<propto__>(offset_prices, 51, 10));
-        current_statement__ = 40;
+        current_statement__ = 42;
         for (int i = 1; i <= N_samples; ++i) {
           int day = std::numeric_limits<int>::min();
-          current_statement__ = 34;
+          current_statement__ = 36;
           day = stan::model::rvalue(day_of_week, "day_of_week",
                   stan::model::index_uni(i));
-          current_statement__ = 35;
+          current_statement__ = 37;
           lp_accum__.add(
             stan::math::normal_lpdf<propto__>(
               stan::model::rvalue(demand_samples, "demand_samples",
@@ -367,7 +372,7 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
                        stan::model::index_uni(i)))) +
                   (a_day * stan::math::pow(day, 2))) + (b_day * day)) +
                 offset_demand), 100));
-          current_statement__ = 36;
+          current_statement__ = 38;
           lp_accum__.add(
             stan::math::normal_lpdf<propto__>(
               stan::model::rvalue(generation_samples, "generation_samples",
@@ -381,7 +386,7 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
                    stan::model::rvalue(wind_speed_historic,
                      "wind_speed_historic", stan::model::index_uni(i)))) +
                 offset_generation), 1000));
-          current_statement__ = 37;
+          current_statement__ = 39;
           lp_accum__.add(
             stan::math::normal_lpdf<propto__>(
               stan::model::rvalue(prices_samples, "prices_samples",
@@ -393,7 +398,7 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
                    stan::model::rvalue(generation_samples,
                      "generation_samples", stan::model::index_uni(i)))) +
                 offset_prices), 100));
-          current_statement__ = 38;
+          current_statement__ = 40;
           lp_accum__.add(
             stan::math::normal_lpdf<false>(
               stan::model::rvalue(prices_samples, "prices_samples",
@@ -505,19 +510,22 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
       if (stan::math::logical_negation(emit_generated_quantities__)) {
         return ;
       } 
+      Eigen::Matrix<double, -1, 1> log_lik =
+         Eigen::Matrix<double, -1, 1>::Constant(N,
+           std::numeric_limits<double>::quiet_NaN());
       std::vector<double> demand =
          std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
       std::vector<double> generation =
          std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
       std::vector<double> prices =
          std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
-      current_statement__ = 22;
+      current_statement__ = 24;
       for (int i = 1; i <= N; ++i) {
         int day = std::numeric_limits<int>::min();
-        current_statement__ = 17;
+        current_statement__ = 18;
         day = stan::model::rvalue(day_of_week, "day_of_week",
                 stan::model::index_uni(i));
-        current_statement__ = 18;
+        current_statement__ = 19;
         stan::model::assign(demand,
           stan::math::normal_rng(
             (((((a_hour *
@@ -530,7 +538,7 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
                 (a_day * stan::math::pow(day, 2))) + (b_day * day)) +
               offset_demand), 100, base_rng__),
           "assigning variable demand", stan::model::index_uni(i));
-        current_statement__ = 19;
+        current_statement__ = 20;
         stan::model::assign(generation,
           stan::math::normal_rng(
             (((a_ws *
@@ -542,7 +550,7 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
                    stan::model::index_uni(i)))) + offset_generation), 1000,
             base_rng__),
           "assigning variable generation", stan::model::index_uni(i));
-        current_statement__ = 20;
+        current_statement__ = 21;
         stan::model::assign(prices,
           stan::math::normal_rng(
             (((a_demand *
@@ -553,7 +561,19 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
                    stan::model::index_uni(i)))) + offset_prices), 100,
             base_rng__),
           "assigning variable prices", stan::model::index_uni(i));
+        current_statement__ = 22;
+        stan::model::assign(log_lik,
+          stan::math::normal_lpdf<false>(
+            stan::model::rvalue(prices, "prices", stan::model::index_uni(i)),
+            (((a_demand *
+                stan::model::rvalue(demand, "demand",
+                  stan::model::index_uni(i))) +
+               (a_generation *
+                 stan::model::rvalue(generation, "generation",
+                   stan::model::index_uni(i)))) + offset_prices), 100),
+          "assigning variable log_lik", stan::model::index_uni(i));
       }
+      out__.write(log_lik);
       out__.write(demand);
       out__.write(generation);
       out__.write(prices);
@@ -632,7 +652,7 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
     names__ = std::vector<std::string>{"a_hour", "b_hour", "a_day", "b_day",
       "offset_demand", "demand_samples", "a_ws", "b_ws", "offset_generation",
       "generation_samples", "a_demand", "a_generation", "offset_prices",
-      "demand", "generation", "prices"};
+      "log_lik", "demand", "generation", "prices"};
     
     } // get_param_names() 
     
@@ -646,6 +666,7 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
       }, std::vector<size_t>{static_cast<size_t>(N_samples)},
       std::vector<size_t>{}, std::vector<size_t>{}, std::vector<size_t>{
       }, std::vector<size_t>{static_cast<size_t>(N)},
+      std::vector<size_t>{static_cast<size_t>(N)},
       std::vector<size_t>{static_cast<size_t>(N)},
       std::vector<size_t>{static_cast<size_t>(N)}};
     
@@ -683,6 +704,11 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
     }
     
     if (emit_generated_quantities__) {
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "log_lik" + '.' + std::to_string(sym1__));
+        } 
+      }
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
           param_names__.emplace_back(std::string() + "demand" + '.' + std::to_string(sym1__));
@@ -736,6 +762,11 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
     if (emit_generated_quantities__) {
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
+          param_names__.emplace_back(std::string() + "log_lik" + '.' + std::to_string(sym1__));
+        } 
+      }
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
           param_names__.emplace_back(std::string() + "demand" + '.' + std::to_string(sym1__));
         } 
       }
@@ -755,13 +786,13 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
     
   inline std::string get_constrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"a_hour\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_hour\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a_day\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_day\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_demand\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"demand_samples\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N_samples) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"a_ws\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_ws\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_generation\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"generation_samples\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N_samples) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"a_demand\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a_generation\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_prices\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"demand\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"generation\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"prices\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"a_hour\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_hour\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a_day\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_day\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_demand\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"demand_samples\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N_samples) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"a_ws\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_ws\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_generation\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"generation_samples\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N_samples) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"a_demand\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a_generation\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_prices\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"demand\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"generation\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"prices\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
     
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"a_hour\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_hour\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a_day\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_day\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_demand\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"demand_samples\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N_samples) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"a_ws\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_ws\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_generation\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"generation_samples\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N_samples) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"a_demand\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a_generation\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_prices\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"demand\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"generation\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"prices\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"a_hour\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_hour\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a_day\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_day\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_demand\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"demand_samples\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N_samples) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"a_ws\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"b_ws\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_generation\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"generation_samples\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N_samples) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"a_demand\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"a_generation\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"offset_prices\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"demand\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"generation\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"},{\"name\":\"prices\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
     
     } // get_unconstrained_sizedtypes() 
     
@@ -779,7 +810,7 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
       + 1) + 1) + 1);
       const size_t num_transformed = 0;
       const size_t num_gen_quantities = 
-  ((N + N) + N);
+  (((N + N) + N) + N);
       std::vector<double> vars_vec(num_params__
        + (emit_transformed_parameters * num_transformed)
        + (emit_generated_quantities * num_gen_quantities));
@@ -802,7 +833,7 @@ class final_posterior_model3_model final : public model_base_crtp<final_posterio
       + 1) + 1) + 1);
       const size_t num_transformed = 0;
       const size_t num_gen_quantities = 
-  ((N + N) + N);
+  (((N + N) + N) + N);
       vars.resize(num_params__
         + (emit_transformed_parameters * num_transformed)
         + (emit_generated_quantities * num_gen_quantities));
