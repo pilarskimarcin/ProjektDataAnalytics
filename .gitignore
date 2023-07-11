@@ -1,5 +1,5 @@
-\.idea
-\PeerReview
-\Temp_wind
+/.idea
+/PeerReview
+/Temp_wind
 *.bkp
 *.code-workspace
